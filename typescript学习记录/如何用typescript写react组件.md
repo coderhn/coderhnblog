@@ -80,7 +80,7 @@ export default NewTable;
 
 ### 如何配置全局主题色
 
-antdUI提供的一些默认的组件的样式是跟着主题走的，在config文件夹里配置defaultSettings.ts文件里配置
+antdpro脚手架提供的一些默认的组件的样式是跟着主题走的，在config文件夹里配置defaultSettings.ts文件里配置
 
 ```typescript
 import { Settings as ProSettings } from '@ant-design/pro-layout';
