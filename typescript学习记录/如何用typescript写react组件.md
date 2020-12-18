@@ -179,4 +179,19 @@ export async function getServerData(params: any) {
 
 };
 ```
+index.tsx的文件如何将model注入到组件中，这里的写法基本上和传统的js版本antdpro一致，只需要将总的model的类型接口匹配给注入的model
 
+```typescript
+....
+export default connect(({ testmodel }: ConnectState) => ({
+    testmodel: testmodel
+}))(App)
+```
+最关键的一步connect.d.ts文件，你需要将自己定义的model注入到总的连接model的这个文件中
+```typescript
+import {TestStateType} from '../pages/Supplier/model'
+
+export interface ConnectState {
+ testmodel:TestStateType;
+}
+```
